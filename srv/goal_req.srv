@@ -1,0 +1,7 @@
+bool requested
+---
+float32 goal_x
+float32 goal_y
+float32 pos_x
+float32 pos_y
+float32 yaw
