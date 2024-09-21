@@ -9,10 +9,12 @@ Simulated via Gazebo & RViz
 <br/><br/>
 Run via
 ```
+source devel/setup.bash
 roslaunch kobuki_navigation master.launch
 ```
 If gets spammed with TF_REPEATED_DATA warning (a known bug in AMCL library), run
 ```
+source devel/setup.bash
 roslaunch kobuki_navigation master.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
 ```
 <br/>
