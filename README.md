@@ -1,8 +1,25 @@
-# kobuki_navigation
+# Kobuki_Navigation
+This project has been completed as part of a coursework for COMPSYS 732 at the University of Auckland.
+<br/><br/>
+
+## Testing Environment
+Ubuntu 20.04 LTS <br/>
+ROS1 Noetic <br/>
+Simulated via Gazebo & RViz
+<br/><br/>
+Run via
+```
+roslaunch kobuki_navigation master.launch
+```
+If gets spammed with TF_REPEATED_DATA warning (a known bug in AMCL library), run
+```
+roslaunch kobuki_navigation master.launch 2> >(grep -v TF_REPEATED_DATA buffer_core)
+```
+<br/>
 
 ## Robot Model
 This project utilised a kobuki (turtlebot 2) mobile base, with Microsoft Kinect as the perception sensor for its surroundings.
-
+<br/><br/>
 ## Project Description
 In this blind navigation project, the primary objective was to explore an unfamiliar environment, locate a specific goal object, and return to the starting location. 
 The goal object in this scenario was a 10 cm x 10 cm x 10 cm red cube, generated within Gazebo with its default red texture. 
